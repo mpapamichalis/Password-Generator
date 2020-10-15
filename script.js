@@ -8,26 +8,25 @@ function getPasswordOptions() {
     return
   }
   if (pwdLength > 128) {
-    alert("Password can't sxceed 128 characters.")
+    alert("Password can't exceed 128 characters.")
 
     return
   }
   var hasSpecialCharacters = confirm("Do you want your password to contain special characters?");
-  var hasNumbers = confirm("Do you want your password to containt numbers?");
+  var hasNumbers = confirm("Do you want your password to contain numbers?");
   var hasUpperCase= confirm ("Do you want your password to contain uppercase letters?");
-  var hasLowerCase= confirm ("DO you want your password to contain lower case letters?");
+  var hasLowerCase= confirm ("Do you want your password to contain lower case letters?");
 
   if (hasSpecialCharacters === false && 
     hasNumbers === false &&
     hasUpperCase === false &&
     hasLowerCase === false) {
-      alert("Must choose one option")
+      alert("You must choose one option.")
       return
     }
 
-  
-
-
+      
+    }
 
   var getPasswordOptions = {
     length: pwdLength,
@@ -40,11 +39,13 @@ function getPasswordOptions() {
 }
 
 
-
-
-
 function generatePassword() {
-
+  var userChoices = getPasswordOptions();
+  var pwdLength = userChoices.length
+  var hasSpecialCharacters = userChoices.specialCharacters
+  var hasNumbers = userChoices.numericCharacters
+  var hasUpperCase = userChoices.upperCase
+  var hasLowerCase = userChoices.lowerCase 
 }
 // Write password to the #password input
 function writePassword() {
