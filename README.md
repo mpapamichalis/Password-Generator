@@ -4,4 +4,4 @@ This application generates a random password based on input from choices prompte
 
 https://mpapamichalis.github.io/Password-Generator/
 
-C:\Users\19729\Desktop\SMU\Repositories\Password-Generator\Screenshot of first prompt.PNG
+<img src= "./images/screenshot-first-prompt.png">
