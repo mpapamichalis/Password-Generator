@@ -1,15 +1,13 @@
 // Assignment Code //
 var generateBtn = document.querySelector("#generate");
 
-// Characters password may contain:
+// Possible characters password may contain:
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 var specialChar = "!@#$%^&*()_-+=;/?.,><";
 var numbers = "1234567890";
 
-// Code to generate random password based on user input:
-
-
+// Criteria to generate random password based on user input.
 // User input options:
 function generatePassword() {
   var passwordLength = prompt("Please enter desired password length.")
@@ -17,11 +15,11 @@ function generatePassword() {
     alert("Password must be between 8 and 128 character in length.")
     passwordLength = prompt("Please enter desired password length.")
   }
-
   var specialCharConfirm = confirm("Do you want your password to contain special characters?");
   var numbConfirm = confirm("Do you want your password to contain numbers?");
   var upperCaseConfirm = confirm("Do you want your password to contain uppercase letters?");
 
+  // Random selection to generate password pulling from user's input from the above prompts.
   var possibleChar = lowerCase.split("");
   console.log(possibleChar);
 
