@@ -8,12 +8,7 @@ var specialChar = "!@#$%^&*()_-+=;/?.,><";
 var numbers = "1234567890";
 
 // Code to generate random password based on user input:
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
-}
 
 // User input options:
 function generatePassword() {
@@ -23,7 +18,7 @@ function generatePassword() {
     passwordLength = prompt("Please enter desired password length.")
   }
 
-  var specialChar = confirm("Do you want your password to contain special characters?");
+  var specialCharConfirm = confirm("Do you want your password to contain special characters?");
   var numbConfirm = confirm("Do you want your password to contain numbers?");
   var upperCaseConfirm = confirm("Do you want your password to contain uppercase letters?");
 
@@ -32,10 +27,10 @@ function generatePassword() {
 
   if (upperCaseConfirm) {
     possibleChar = possibleChar.concat(upperCase.split(""));
-    console.log(posssibleChar);
+    console.log(possibleChar);
   }
 
-  if (specCharConfirm) {
+  if (specialCharConfirm) {
     possibleChar = possibleChar.concat(specialChar.split(""));
     console.log(possibleChar);
   }
@@ -59,8 +54,8 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
+ 
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", generatePassword);
+generateBtn.addEventListener("click", writePassword);
